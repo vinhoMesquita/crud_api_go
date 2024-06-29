@@ -1,10 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"go-api/controller"
 	"go-api/db"
 	"go-api/repository"
 	"go-api/usecase"
+	"log"
+	"os"
+	"path/filepath"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -40,13 +44,40 @@ func main() {
 	userController := controller.NewUserController(userUseCase)
 	frequenciaController := controller.NewFrequenciaController(frequenciaUseCase)
 	server.Static("/static", "./web/static/")
-	// // Carregar os arquivos estáticos
-	// server.LoadHTMLGlob("web/dashboard.html")
 
-	// // Rota para a página dashboard
-	// server.GET("web/dashboard.html", func(ctx *gin.Context) {
-	// 	ctx.HTML(200, "dashboard.html", nil)
-	// })
+	// Verificar o diretório atual
+	workingDir, err := os.Getwd()
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("Current working directory:", workingDir)
+
+	// Verificar se o diretório e arquivos HTML existem
+	files, err := filepath.Glob("web/*.html")
+	if err != nil {
+		log.Fatal(err)
+	}
+	if len(files) == 0 {
+		log.Fatal("No HTML files found in the web directory")
+	} else {
+		fmt.Println("Found HTML files:", files)
+	}
+
+	// Carregar os arquivos estáticos
+	server.LoadHTMLGlob("web/*.html")
+
+	// Rotas para as páginas HTML
+	server.GET("/dashboard", func(ctx *gin.Context) {
+		ctx.HTML(200, "dashboard.html", nil)
+	})
+
+	server.GET("/crud", func(ctx *gin.Context) {
+		ctx.HTML(200, "crud.html", nil)
+	})
+
+	server.GET("/home", func(ctx *gin.Context) {
+		ctx.HTML(200, "index.html", nil)
+	})
 
 	// Rotas da API para Alunos
 	server.GET("/ping", func(ctx *gin.Context) {

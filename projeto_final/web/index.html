@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .box {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .box h2 {
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+
+        .box p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="http://localhost:5501/crud">
+            <div class="box">
+                <h2>CRUD de Alunos</h2>
+                <p>Gerenciar informações de alunos</p>
+            </div>
+        </a>
+        
+        <a href="http://localhost:5501/dashboard">
+            <div class="box">
+                <h2>CRUD de Frequência</h2>
+                <p>Registrar frequência dos alunos</p>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
