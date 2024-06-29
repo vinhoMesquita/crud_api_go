@@ -7,7 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-   
+
 }
 
 header {
@@ -43,9 +43,9 @@ header nav ul li a:hover {
 
 .forms {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*flex-wrap: wrap;*/
 }
 
 .form {
@@ -140,4 +140,20 @@ header nav ul li a:hover {
         width: 100%;
         padding: 10px;
     }
+}
+
+.flex {
+    display: flex;
+
+    &.column {
+        flex-direction: column;
+    }
+
+    &.row {
+        flex-direction: row;
+    }
+}
+
+#form-buscar, #form-deletar{
+    max-height: 200px;
 }
