@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de Alunos</title>
+    <link rel="stylesheet" href="/web//static/css/style_crud.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/web/static/js/script_crud.js" defer></script>
+</head>
+<body>
+    
+    <h1>Gerenciamento de Alunos</h1>
+
+    <div class="forms">
+        <form id="form-aluno" class="form">
+            <h2>Cadastrar Aluno</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" required>
+            <label for="bf">Body Fat:</label>
+            <input type="number" step="0.01" id="bf" required>
+            <label for="massa">Muscle Mass:</label>
+            <input type="number" step="0.01" id="massa" required>
+            <label for="altura">Altura:</label>
+            <input type="number" step="0.01" id="altura" required>
+            <label for="peso">Peso:</label>
+            <input type="number" step="0.01" id="peso" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <form id="form-buscar" class="form">
+            <h2>Buscar Aluno por ID</h2>
+            <label for="id-buscar">ID:</label>
+            <input type="number" id="id-buscar" required>
+            <button type="submit">Buscar</button>
+        </form>
+
+        <form id="form-deletar" class="form">
+            <h2>Deletar Aluno</h2>
+            <label for="id-deletar">ID:</label>
+            <input type="number" id="id-deletar" required>
+            <button type="submit">Deletar</button>
+        </form>
+
+        <form id="form-editar" class="form">
+            <h2>Editar Aluno</h2>
+            <label for="id-editar">ID:</label>
+            <input type="number" id="id-editar" required>
+            <label for="nome-editar">Nome:</label>
+            <input type="text" id="nome-editar" required>
+            <label for="idade-editar">Idade:</label>
+            <input type="number" id="idade-editar" required>
+            <label for="bf-editar">Body Fat:</label>
+            <input type="number" step="0.01" id="bf-editar" required>
+            <label for="massa-editar">Muscle Mass:</label>
+            <input type="number" step="0.01" id="massa-editar" required>
+            <label for="altura-editar">Altura:</label>
+            <input type="number" step="0.01" id="altura-editar" required>
+            <label for="peso-editar">Peso:</label>
+            <input type="number" step="0.01" id="peso-editar" required>
+            <button type="submit">Editar</button>
+        </form>
+    </div>
+
+    <div class="messages">
+        <div id="message"></div>
+    </div>
+
+    <table id="alunos-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Body Fat</th>
+                <th>Muscle Mass</th>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>IMC</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <table id="alunos-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Body Fat</th>
+                <th>Muscle Mass</th>
+                <th>Altura</th>
+                <th>Peso</th>
+                <th>IMC</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Dados dos alunos serão inseridos aqui dinamicamente -->
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/e97b54bf07.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" href="static/css/dashboard.css">
+    <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/dist/tippy.css">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <i class="fa-solid fa-chart-column"></i>
+            <div class="banner-section title-section">
+                <h1>Frequência de Alunos</h1>
+            </div>
+            <div class="banner-section user-info-section">
+                <p><i class="fa-regular fa-circle-user"></i>Usuário: <span id="username"></span></p>
+                <p>ID: <span id="userid"></span></p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="date-range-section">
+            <label for="start-date">Inicio:</label>
+                <input type="date" id="start-date">
+            <label for="end-date">Fim:</label>
+                <input type="date" id="end-date">
+                <i class="fas fa-question-circle" id="data-range-help" data-tippy-content="Selecione o intervalo de datas para atualizar o gráfico."></i>
+        </section>
+        <section id="bar-chart-section">
+            <h2>Frequência por Turno</h2>
+            <div id="bar-chart"></div>
+        </section>
+        <section id="line-chart-section">
+            <h2>Frequência por Dia da Semana</h2>
+            <div id="line-chart"></div>
+        </section>
+        <section class="new-entry-section">
+            <div class = "section-content">
+                <h2>Adicionar Nova Frequência</h2>
+                <form id="new-entry-form">
+                    <label for="t1">Manhã:</label>
+                    <input type="number" id="t1" name="t1" min="0" max="9999" required>
+                    <label for="t2">Tarde:</label>
+                    <input type="number" id="t2" name="t2" min="0" max="9999" required>
+                    <label for="t3">Noite:</label>
+                    <input type="number" id="t3" name="t3" min="0" max="9999" required>
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="date" required>
+                    <button type="submit" class="input-button">Adicionar</button>
+                </form>
+            </div>
+            <i class="fas fa-question-circle" id="new-entry-help" data-tippy-content="Insira a quantidade de alunos em cada turno e uma data para adicionar uma nova frequência."></i>
+        </section>
+    </main>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script src="/js/tooltips.js"></script>
+    <script src="static/js/dashboard.js"></script>
+</body>
+</html>

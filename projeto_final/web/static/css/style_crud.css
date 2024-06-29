@@ -1,0 +1,143 @@
+body {
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+   
+}
+
+header {
+    margin: 0;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #a5d6a7;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+header nav ul li a:hover {
+    color: #05313d;
+}
+
+.forms {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    margin: 10px;
+}
+
+.form label {
+    margin-bottom: 5px;
+}
+
+.form input[type="text"],
+.form input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form button[type="submit"]:hover {
+    opacity: 0.8;
+}
+
+.messages {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+#message {
+    display: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#message.error {
+    background-color: #f44336;
+    color: white;
+}
+
+#message.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#alunos-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#alunos-table th,
+#alunos-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#alunos-table th {
+    background-color: #a5d6a7;
+    color: white;
+}
+
+#alunos-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 600px) {
+    .form {
+        width: 100%;
+        padding: 10px;
+    }
+}

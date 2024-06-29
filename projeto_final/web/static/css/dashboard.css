@@ -1,0 +1,120 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9; /* Fundo claro para toda a página */
+}
+
+header {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Texto em branco */
+    padding: 10px 0; /* Espaçamento vertical */
+}
+
+/* Banner com informacoes do usuario */
+.banner {
+    font-size: 22px;
+    display: flex; /* Usa flexbox para o layout */
+    justify-content: space-between; /* Distribui o espaço entre os elementos */
+    align-items: center; /* Alinha os elementos no centro verticalmente */
+    padding: 0 20px; /* Espaçamento interno horizontal */
+}
+
+/* Banner section*/
+.banner-section {
+    flex: 1; /* Cada seção ocupa o mesmo espaço */
+}
+
+/* Setor do titulo */
+.title-section h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Setor com informacoes do usuario */
+.user-info-section p {
+    margin: 0;
+    font-size: 18px;
+}
+
+/* Setor com informacoes do usuario */
+.user-info-section p + p {
+    margin-top: 5px; /* Espaço entre as linhas de informações do usuário */
+}
+
+/* Titulos dos graficos */
+h1, h2 {
+    margin: 10px 0;
+}
+
+/* Main do html */
+main {
+    margin: 20px 0;
+}
+
+/* Base dos setores */
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Setores de escolha de data e de nova entrada */
+.date-range-section, .new-entry-section {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.date-range-section .section-content,
+.new-entry-section .section-content{
+    flex: 1;
+}
+
+/*Botoes e inpust alinhados*/
+input, button {
+    display: flex;
+    margin: 10px 0;
+}
+
+/* Estilos para os botões de input */
+.input-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover no botao do input */
+.input-button:hover {
+    background-color: #007BFF;
+}
+
+/* Icone de charts */
+.fa-solid {
+
+    color: #f4f4f9;
+    width: 25px;
+
+
+}
+/*Icone de user */
+.fa-regular {
+
+    color: #f4f4f9;
+    width: 25px;
+
+}
+
+ .fa-question-circle {
+        color: #007BFF;
+        cursor: pointer;
+    }
