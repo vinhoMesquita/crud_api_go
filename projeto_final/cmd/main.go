@@ -24,7 +24,7 @@ func main() {
 	server.Use(cors.New(config))
 
 	// Conexão com o banco de dados
-	dbConnection, err := db.ConectDB() // Ajuste o nome da função conforme a sua implementação
+	dbConnection, err := db.ConectDB() 
 	if err != nil {
 		panic(err)
 	}
